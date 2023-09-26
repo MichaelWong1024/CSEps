@@ -1,0 +1,8 @@
+3 = >50% (student did the majority of the work for that category – so there can only be a maximum of one “3” per category + problem combination)
+2 = 20-50% (solid contribution)
+1 = 1-20% (minor contribution)
+0 = no contribution
+
+Problem 1 (adjmatrix.c)
+gtUsername | Ideas | Code Design | Implementation | Debugging | Comments
+mhuang339  |   3   |      3      |       3        |     3     |    3

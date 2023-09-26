@@ -1,0 +1,7 @@
+While completing this assignment:
+
+1. Graph Representation: Using 1D arrays for graphs, as opposed to the conventional 2D adjacency matrices, was initially challenging to grasp.
+
+2. Graph Traversal: The 1D structure added complexity when computing vertex degrees and detecting paths, requiring meticulous indexing.
+
+3. Loop Complexity: Deeply nested loops in path detection necessitated iterative refinements for accuracy and efficiency.

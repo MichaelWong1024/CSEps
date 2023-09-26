@@ -1,0 +1,23 @@
+CSE 6010 Workshop 1
+
+Mingzheng Michael Huang (Worked Independently)
+
+Problem 1: Returning information in three ways
+------------------------------------------
+Ideas / planning: 3
+Detailed code design: 3
+Writing code / implementation: 3
+Debugging / testing: 3
+Documentation / Comments: 3
+
+Problem 2: Dynamic memory allocation and memory leaks
+-----------------------------------------------------
+Ideas / planning: 3
+Detailed code design: 3
+Writing code / implementation: 3
+Debugging / testing: 3
+Documentation / Comments: 3
+
+Notes:
+Completed the workshop independently. Encountered some challenges in debugging but managed to resolve them through testing. There are no issues with memory leaks, according to Valgrind.
+
