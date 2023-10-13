@@ -5,6 +5,5 @@
 
 Problem 1 (diameter.c)
 gtUsername | Ideas | Code Design | Implementation | Debugging | Comments
-hbaldwa3   |   0   |      0      |       0        |     0     |    0
-echerry30  |   0   |      0      |       0        |     0     |    0
-gburdell3  |   0   |      0      |       0        |     0     |    0
+mhuang339  |   3   |      2      |       3        |     2     |    3
+qhuang307  |   2   |      3      |       2        |     3     |    2

@@ -1,0 +1,40 @@
+michaelwong@Wong:~/desktop/6010/Workshop3$ gcc -o diameter.c diameter -lm
+gcc: error: diameter: No such file or directory
+michaelwong@Wong:~/desktop/6010/Workshop3$ ls
+'#diameter.c#'   Workshop3.pdf   contrib.txt   diameter.c   graph.h
+michaelwong@Wong:~/desktop/6010/Workshop3$ gcc -o diameter diameter.c -lm
+diameter.c: In function ‘calcIterations’:
+diameter.c:76:53: error: ‘s’ undeclared (first use in this function)
+   76 |       double iterations = ceil(log(NVERT - 1) / log(s));
+      |                                                     ^
+diameter.c:76:53: note: each undeclared identifier is reported only once for each function it appears in
+diameter.c: In function ‘CalcShortestPaths’:
+diameter.c:102:16: error: expected identifier or ‘(’ before ‘=’ token
+  102 |       for (int = 0; i < NVERT * NVERT; i++) {
+      |                ^
+diameter.c:102:21: error: ‘i’ undeclared (first use in this function)
+  102 |       for (int = 0; i < NVERT * NVERT; i++) {
+      |                     ^
+diameter.c: In function ‘CalcDiameter’:
+diameter.c:127:7: error: expected declaration or statement at end of input
+  127 |       }
+      |       ^
+michaelwong@Wong:~/desktop/6010/Workshop3$ ls
+'#diameter.c#'   Workshop3.pdf   contrib.txt   diameter.c   graph.h
+michaelwong@Wong:~/desktop/6010/Workshop3$ shel
+
+
+Command 'shel' not found, did you mean:
+
+  command 'skel' from deb libadios-bin (1.13.1-20)
+  command 'shed' from deb shed (1.15-4)
+  command 'shelr' from deb shelr (0.16.3-2)
+
+Try: sudo apt install <deb name>
+
+michaelwong@Wong:~/desktop/6010/Workshop3$ 
+michaelwong@Wong:~/desktop/6010/Workshop3$ 
+michaelwong@Wong:~/desktop/6010/Workshop3$ exit
+exit
+
+Process terminal exited abnormally with code 127
