@@ -12,28 +12,21 @@ typedef struct {
     int countW, countP;      // Wall, Particle collisions count
 } Particle;
 
-typedef struct collision {
-    int particle1;
-    int particle2;
-    double time;
+typedef struct {
+    int p1, p2;       // Colliding particles' IDs
+    double t;         // Collision time
 } Collision;
-
-// typedef struct {
-//     int p1, p2;       // Colliding particles' IDs
-//     double t;         // Collision time
-// } Collision;
 
 void readFromFile(char* fileName);
 
-double min(double x, double y);
-int areDoublesEqual(double x, double y, double epsilon);
+// Collision calculation functions
+Collision findColW(Particle p);
+Collision findColP(Particle p1, Particle p2, Collision lastEarliest);
 
-Collision calCollisionPW(Particle p);
-Collision calCollisionPP(Particle p1, Particle p2, Collision lastEarliest);
+void initColArr(void);
 
 void calCollisions(void);
 void sortCollisions(void);
-void calInitialCollisions(void);
 void updateCollidedParticlePW(Particle particle, Collision earliest);
 void updateCollidedParticlePP(Particle particle1, Particle particle2, Collision earliest);
 void processEarliest(void);

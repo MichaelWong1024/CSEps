@@ -26,7 +26,7 @@ void read(const char* file) {
     // Read parameters and allocate memory
     fscanf(fp, "%d %lf %lf %lf", &nParticles, &radius, &lenX, &lenY);
     particles = malloc(nParticles * sizeof(Particle));
-    collisions = malloc(nParticles * (nParticles - 1) / 2 * sizeof(Collision));
+    collisions = malloc(nParticles * (nParticles + 1) / 2 * sizeof(Collision));
 
     // Read particle initial conditions
     for (int i = 0; i < nParticles; ++i) {
@@ -178,10 +178,10 @@ void processNext(void) {
         updatePC(&particles[earliest.p1], &particles[earliest.p2], &earliest);
     }
 
-    refreshCols();  // Assuming refreshCols will refresh the collisions array.
+    updateCols();  // Assuming updateCols will refresh the collisions array.
 }
 
-void refreshCols() {
+void updateCols() {
     Collision earliest = lastEarliest;
     int p1 = earliest.p1;
     int p2 = earliest.p2;
@@ -236,10 +236,11 @@ int main(int argc, char* argv[]) {
     // Iterate until the simulation reaches the end time
     while (collisions[0].t <= endTime) {
         processNext();
-        refreshCols();
+        updateCols();
         sortCols();
     }
 
+    updateAll();
     // Update the positions of all the particles to the end time
     for (int index = 0; index < nParticles; index++) {
         deltaTime = endTime - particles[index].tLast;

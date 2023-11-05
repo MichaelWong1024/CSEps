@@ -20,14 +20,11 @@ typedef struct collision {
 } Collision;
 
 void readFromFile(char* fileName);
-double min(double x, double y);
-int areDoublesEqual(double x, double y, double epsilon);
 Collision calCollisionPW(Particle p);
 Collision calCollisionPP(Particle p1, Particle p2, Collision lastEarliest);
 void calCollisions(void);
 void sortCollisions(void);
 void calInitialCollisions(void);
-void sortCollisions(void);
 void updateCollidedParticlePW(Particle particle, Collision earliest);
 void updateCollidedParticlePP(Particle particle1, Particle particle2, Collision earliest);
 void processEarliest(void);

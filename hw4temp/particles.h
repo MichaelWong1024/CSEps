@@ -18,21 +18,21 @@ typedef struct {
     double t;         // Collision time
 } Collision;
 
-// Collision calculation functions
-Collision findWC(const Particle* p);      // Find wall collision
-Collision findPC(Particle* p1, Particle* p2); // Find particle collision
+void read(char* file);               // Read data from file
 
-// Helper functions
-void read(const char* file);               // Read data from file
+// Collision calculation functions
+Collision findWC(Particle p);      // Find wall collision
+Collision findPC(Particle p1, Particle p2, Collision last); // Find particle collision
 
 // Collision handling functions
 void computeAll();                        // Compute all collisions
 void sortCols();                          // Sort collisions
-void updateWC(Particle* p, const Collision* col); // Update wall collision
+void initializeC();                          // Initialize the collision array
+void updateWC(Particle* p, Collision* col); // Update wall collision
 void updatePC(Particle* p1, Particle* p2, const Collision* col); // Update particle collision
-void processNext();                       // Process the next collision
-void refreshCols();                       // Refresh collision list
-void updateAll();                         // Update all particles
-void finish();                            // Finalize the simulation
+void processNextC();                       // Process the next collision
+void updateColsL();                       // Refresh collision list
+void updateAllP();                         // Update all particles
+void finalize();                            // Finalize the simulation
 
 #endif /* PARTICLES_H */
