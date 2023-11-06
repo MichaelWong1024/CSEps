@@ -17,21 +17,28 @@ typedef struct {
     double t;         // Collision time
 } Collision;
 
-void readFromFile(char* fileName);
+extern Particle* particles;
+extern Collision* collisions;
+extern int numP;
+extern double radius;
+extern double lenX;
+extern double lenY;
+extern Collision lastCol;
+
+void read(const char* fileName);
 
 // Collision calculation functions
-Collision findColW(Particle p);
-Collision findColP(Particle p1, Particle p2, Collision lastEarliest);
+Collision findColW(Particle p); // Find wall collision
+Collision findColP(Particle p1, Particle p2, Collision lastEarliest); // Find particle collision
 
-void initColArr(void);
-
-void calCollisions(void);
-void sortCollisions(void);
-void updateCollidedParticlePW(Particle particle, Collision earliest);
-void updateCollidedParticlePP(Particle particle1, Particle particle2, Collision earliest);
-void processEarliest(void);
-void updateCollisions(void);
-void updateAllParticles(void);
-void finalize(void);
+// Collision handling functions
+void initColArr(); // Compute all collisions into an array
+void sortColArr(); // Sort collisions array
+void updatePW(Particle particle, Collision earliest); // Update wall collision
+void updatePP(Particle particle1, Particle particle2, Collision earliest); // Update particle collision
+void jumpCol(); // Process the next collision
+void updateColArr(); // Update collision list
+void updateParArr(); // Update all particles state
+void finalize(); // Finalize the simulation
 
 #endif /* PARTICLES_H */
