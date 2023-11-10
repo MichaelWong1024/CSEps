@@ -1,0 +1,7 @@
+The integration of the <time.h> header into the C program was successful, resolving the previous compiler warning about the implicit declaration of the time function. This change ensures that the program correctly identifies the prototype for the time function, allowing for the proper seeding of the random number generator with unique values per thread. The compilation should now occur without warnings, and the program is expected to run as intended, providing an estimate of Pi using a Monte Carlo simulation approach in a parallelized fashion with OpenMP.
+
+
+
+
+
+
